@@ -42,7 +42,11 @@ const AnimatedCounter: React.FC<{
   );
 };
 
-export const Stats: React.FC = () => {
+interface StatsProps {
+  setActiveTab: (tab: string) => void;
+}
+
+export const Stats: React.FC<StatsProps> = ({ setActiveTab }) => {
   const expVal = parseFloat(calculateExperience(resumeData.stats.fullTimeStartDate));
 
   const containerVariants = {
@@ -213,17 +217,25 @@ export const Stats: React.FC = () => {
                   </p>
                 </div>
 
-                <a
-                  href={stat.link}
-                  target={stat.link.startsWith("http") ? "_blank" : "_self"}
-                  rel="noopener noreferrer"
-                  className="flex items-center text-sm font-semibold text-brand-cyan hover:text-brand-purple transition-colors gap-1.5 mt-auto group-hover:underline"
-                >
-                  {stat.title === "Experience"
-                    ? "View Work Timeline"
-                    : `Verify on ${stat.title}`}
-                  <ExternalLink className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                </a>
+                {stat.link.startsWith("http") ? (
+                  <a
+                    href={stat.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center text-sm font-semibold text-brand-cyan hover:text-brand-purple transition-colors gap-1.5 mt-auto group-hover:underline"
+                  >
+                    {`Verify on ${stat.title}`}
+                    <ExternalLink className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                  </a>
+                ) : (
+                  <button
+                    onClick={() => setActiveTab("experience")}
+                    className="flex items-center text-sm font-semibold text-brand-cyan hover:text-brand-purple transition-colors gap-1.5 mt-auto group-hover:underline cursor-pointer"
+                  >
+                    View Work Timeline
+                    <ExternalLink className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                  </button>
+                )}
               </motion.div>
             );
           })}

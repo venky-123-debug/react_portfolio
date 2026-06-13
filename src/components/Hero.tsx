@@ -14,7 +14,11 @@ import { motion } from "framer-motion";
 import resumeData from "../data/resumeData.json";
 import { calculateExperience } from "../utils/date";
 
-export const Hero: React.FC = () => {
+interface HeroProps {
+  setActiveTab: (tab: string) => void;
+}
+
+export const Hero: React.FC<HeroProps> = ({ setActiveTab }) => {
   const expYears = calculateExperience(resumeData.stats.fullTimeStartDate);
 
   const containerVariants = {
@@ -179,17 +183,17 @@ export const Hero: React.FC = () => {
             className="flex flex-col sm:flex-row items-center justify-center gap-6 w-full"
           >
             <div className="flex gap-4 justify-center w-full sm:w-auto">
-              <a
-                href="#contact"
-                className="flex-1 sm:flex-none px-6 py-3.5 rounded-xl bg-linear-to-r from-brand-purple to-brand-cyan hover:opacity-95 text-white font-bold text-sm text-center shadow-lg shadow-brand-purple/20 transition-all flex items-center justify-center gap-2 group"
+              <button
+                onClick={() => setActiveTab("contact")}
+                className="flex-1 sm:flex-none px-6 py-3.5 rounded-xl bg-linear-to-r from-brand-purple to-brand-cyan hover:opacity-95 text-white font-bold text-sm text-center shadow-lg shadow-brand-purple/20 transition-all flex items-center justify-center gap-2 group cursor-pointer"
               >
                 Get In Touch
                 <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-              </a>
+              </button>
 
-              <a
-                href="#experience"
-                className="flex-1 sm:flex-none px-6 py-3.5 rounded-xl font-semibold text-sm text-center transition-all flex items-center justify-center gap-2 hover:bg-brand-purple/10"
+              <button
+                onClick={() => setActiveTab("experience")}
+                className="flex-1 sm:flex-none px-6 py-3.5 rounded-xl font-semibold text-sm text-center transition-all flex items-center justify-center gap-2 hover:bg-brand-purple/10 cursor-pointer"
                 style={{
                   border: "1px solid var(--border-base)",
                   color: "var(--text-secondary)",
@@ -197,7 +201,7 @@ export const Hero: React.FC = () => {
                 }}
               >
                 View Experience
-              </a>
+              </button>
             </div>
 
             {/* Social Icons */}

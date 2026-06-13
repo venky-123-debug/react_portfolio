@@ -74,8 +74,8 @@ const App: React.FC = () => {
                   transition={{ duration: 0.25 }}
                   className="w-full h-full"
                 >
-                  {activeTab === "about" && <Hero />}
-                  {activeTab === "stats" && <Stats />}
+                  {activeTab === "about" && <Hero setActiveTab={setActiveTab} />}
+                  {activeTab === "stats" && <Stats setActiveTab={setActiveTab} />}
                   {activeTab === "skills" && <Skills />}
                   {activeTab === "experience" && <Experience />}
                   {activeTab === "education" && <Education />}

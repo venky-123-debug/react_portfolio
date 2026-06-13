@@ -81,17 +81,17 @@ export const Contact: React.FC = () => {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-cyan/10 border border-brand-cyan/20 text-brand-cyan text-xs font-semibold uppercase tracking-wider mb-4">
-            <MessageSquare className="w-3.5 h-3.5" /> Reach Out
+            <MessageSquare className="w-3.5 h-3.5" /> Contact
           </div>
           <h2
             className="text-3xl sm:text-4xl font-bold tracking-tight"
             style={{ color: "var(--text-primary)" }}
           >
-            Get In <span className="gradient-text">Touch</span>
+            Get In Touch <span className="gradient-text"></span>
           </h2>
           <p className="mt-4" style={{ color: "var(--text-secondary)" }}>
-            Have a project in mind, want to collaborate, or discuss potential
-            software development roles? Send a message.
+            Whether you'd like to connect, discuss opportunities, ask a question,
+            or simply say hello, I'd be happy to hear from you.
           </p>
         </div>
 
@@ -238,7 +238,7 @@ export const Contact: React.FC = () => {
                             : "var(--input-border)",
                           color: "var(--input-text)",
                         }}
-                        placeholder="John Doe"
+                        placeholder="Enter Full Name"
                       />
                       {errors.name && (
                         <div className="absolute right-3 top-3 text-red-500">
@@ -277,7 +277,7 @@ export const Contact: React.FC = () => {
                             : "var(--input-border)",
                           color: "var(--input-text)",
                         }}
-                        placeholder="johndoe@example.com"
+                        placeholder="Enter Email Address"
                       />
                       {errors.email && (
                         <div className="absolute right-3 top-3 text-red-500">
@@ -317,7 +317,7 @@ export const Contact: React.FC = () => {
                           : "var(--input-border)",
                         color: "var(--input-text)",
                       }}
-                      placeholder="Project Inquiries / Job Opening"
+                      placeholder="Reason for Contact"
                     />
                     {errors.subject && (
                       <div className="absolute right-3 top-3 text-red-500">
@@ -357,7 +357,7 @@ export const Contact: React.FC = () => {
                         color: "var(--input-text)",
                         resize: "none",
                       }}
-                      placeholder="Hi Venkatesh, I would love to discuss a project..."
+                      placeholder="Introduce yourself and share the purpose of your message."
                     />
                     {errors.message && (
                       <div className="absolute right-3 top-3 text-red-500">
