@@ -8,6 +8,7 @@ import {
   Milestone,
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import resumeData from "../data/resumeData.json";
 
 interface ExperienceItem {
   role: string;
@@ -22,60 +23,7 @@ interface ExperienceItem {
 export const Experience: React.FC = () => {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(0);
 
-  const experiences: ExperienceItem[] = [
-    {
-      role: "Junior Software Developer",
-      company: "DocChain.io by Print2Block",
-      location: "Chennai, India ",
-      period: "November 2022 – Present",
-      type: "full-time",
-      tags: [
-        "ReactJS",
-        "Svelte",
-        "SvelteKit",
-        "NodeJS",
-        "ExpressJS",
-        "MongoDB",
-        "Redis",
-        "AWS",
-        "Nginx",
-        "PM2",
-        "JWT",
-      ],
-      responsibilities: [
-        "Developing and enhancing scalable web applications as a Full Stack Junior Software Developer with focus on new feature implementation, performance optimization, and system improvements.",
-        "Leading feature development and enhancements in scalable web applications with focus on architecture, performance optimization, and code quality.",
-        "Developing and enhancing scalable full stack web applications using React.js, Svelte JS, SvelteKit, Node.js, TypeScript, and MongoDB.",
-        "Building responsive and reusable frontend components using React.js, Svelte JS, SvelteKit, Hooks, Tailwind CSS, and Bootstrap.",
-        "Designing and implementing secure backend services using Node.js, Express.js, RESTful APIs, and JWT authentication.",
-        "Integrating frontend applications with backend APIs and optimizing application performance using Redis caching and efficient database queries.",
-        "Collaborating with cross-functional teams in Agile/Scrum environments and participating in peer code reviews.",
-        "Managing end-to-end deployments on AWS, including Nginx, PM2, SSL certificates, and application monitoring.",
-      ],
-    },
-    {
-      role: "Full Stack Software Developer Intern",
-      company: "DocChain.io by Print2Block",
-      location: "Chennai, India",
-      period: "July 2022 – November 2022",
-      type: "internship",
-      tags: [
-        "Full Stack",
-        "JavaScript",
-        "HTML5",
-        "CSS3",
-        "REST APIs",
-        "ReactJS",
-        "NodeJS",
-        "Web Tech",
-      ],
-      responsibilities: [
-        "Gained hands-on experience in Full Stack development using modern web technologies.",
-        "Contributed to various internal projects and learned industry best practices.",
-        "Collaborated with senior engineers to implement UI flows and integrate REST APIs.",
-      ],
-    },
-  ];
+  const experiences = resumeData.experience as ExperienceItem[];
 
   const toggleExpand = (index: number) => {
     setExpandedIndex(expandedIndex === index ? null : index);
@@ -107,7 +55,7 @@ export const Experience: React.FC = () => {
           </h2>
           <p className="mt-4" style={{ color: "var(--text-secondary)" }}>
             My career history and roles building real-world software
-            applications and blockchain-oriented solutions.
+            applications and .
           </p>
         </div>
 

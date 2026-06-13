@@ -11,6 +11,7 @@ import {
   MessageSquare,
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import resumeData from "../data/resumeData.json";
 
 export const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -110,23 +111,23 @@ export const Contact: React.FC = () => {
                   {
                     icon: Mail,
                     label: "Email",
-                    value: "venkatbe26494@gmail.com",
-                    href: "mailto:venkatbe26494@gmail.com",
+                    value: resumeData.personal.email,
+                    href: `mailto:${resumeData.personal.email}`,
                     color: "text-brand-purple",
                     bg: "bg-brand-purple/10",
                   },
                   {
                     icon: Phone,
                     label: "Phone",
-                    value: "+91 7402161837",
-                    href: "tel:7402161837",
+                    value: resumeData.personal.phone,
+                    href: `tel:${resumeData.personal.phone}`,
                     color: "text-brand-cyan",
                     bg: "bg-brand-cyan/10",
                   },
                   {
                     icon: MapPin,
                     label: "Location",
-                    value: "Chennai, Tamil Nadu, India",
+                    value: resumeData.personal.location,
                     href: undefined,
                     color: "text-brand-emerald",
                     bg: "bg-brand-emerald/10",
@@ -178,12 +179,12 @@ export const Contact: React.FC = () => {
                   {[
                     {
                       icon: Linkedin,
-                      href: "https://linkedin.com",
+                      href: resumeData.personal.socials.linkedin,
                       label: "LinkedIn",
                     },
                     {
                       icon: Github,
-                      href: "https://github.com",
+                      href: resumeData.personal.socials.github,
                       label: "GitHub",
                     },
                   ].map(({ icon: Icon, href, label }) => (

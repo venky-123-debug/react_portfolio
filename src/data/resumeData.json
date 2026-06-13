@@ -1,0 +1,131 @@
+{
+  "personal": {
+    "name": "Venkatesh C",
+    "title": "Full Stack Developer",
+    "email": "venkatbe26494@gmail.com",
+    "phone": "+91 7402161837",
+    "location": "Chennai, Tamil Nadu, India",
+    "objective": "Results-driven Full Stack Developer with experience building scalable, secure, and high-performance web applications using React.js, Node.js, JavaScript, TypeScript, and MongoDB. Experienced in developing RESTful APIs, JWT authentication, Redis caching, and deploying production-ready applications on AWS. Passionate about building responsive frontend applications, writing maintainable code, and delivering reliable cloud-based solutions.",
+    "socials": {
+      "linkedin": "https://www.linkedin.com/in/venkatesh-c-4412439a",
+      "github": "https://github.com/venky-123-debug",
+      "leetcode": "https://leetcode.com/u/venky_ME/",
+      "hackerrank": "https://www.hackerrank.com/profile/venkat_c_dev"
+    }
+  },
+  "stats": {
+    "leetcodeSolved": 180,
+    "hackerrankSolved": 100,
+    "fullTimeStartDate": "2022-11-01",
+    "internStartDate": "2022-07-01"
+  },
+  "skills": [
+    {
+      "title": "Frontend Development",
+      "description": "Building modern, scalable and responsive user interfaces.",
+      "skills": ["React", "TypeScript", "SvelteKit", "Tailwind CSS", "Bootstrap", "HTML5", "CSS3"]
+    },
+    {
+      "title": "Backend & APIs",
+      "description": "Designing secure APIs and scalable server-side architectures.",
+      "skills": ["Node.js", "Express.js", "REST APIs", "JWT", "SHA-256"]
+    },
+    {
+      "title": "Databases",
+      "description": "Managing data efficiently with modern databases and caching.",
+      "skills": ["MongoDB", "Redis"]
+    },
+    {
+      "title": "Cloud & DevOps",
+      "description": "Deploying, monitoring and maintaining production systems.",
+      "skills": ["AWS", "GCP", "Nginx", "PM2", "SSL", "Linux"]
+    },
+    {
+      "title": "Programming",
+      "description": "Strong foundation in modern programming languages.",
+      "skills": ["JavaScript", "TypeScript", "Node.js", "Python"]
+    },
+    {
+      "title": "Tools & Testing",
+      "description": "Development workflow, version control and testing tools.",
+      "skills": ["Git", "Bitbucket", "Postman", "Jest"]
+    }
+  ],
+  "experience": [
+    {
+      "role": "Junior Software Developer",
+      "company": "Print2B Tech Private Limited",
+      "location": "Chennai, India",
+      "period": "November 2022 – Present",
+      "startDate": "2022-11-01",
+      "type": "full-time",
+      "tags": [
+        "ReactJS",
+        "Svelte",
+        "SvelteKit",
+        "NodeJS",
+        "ExpressJS",
+        "MongoDB",
+        "Redis",
+        "AWS",
+        "Nginx",
+        "PM2",
+        "JWT"
+      ],
+      "responsibilities": [
+        "Developing and enhancing scalable web applications as a Full Stack Junior Software Developer with focus on new feature implementation, performance optimization, and system improvements.",
+        "Leading feature development and enhancements in scalable web applications with focus on architecture, performance optimization, and code quality.",
+        "Developing and enhancing scalable full stack web applications using React.js, Svelte JS, SvelteKit, Node.js, TypeScript, and MongoDB.",
+        "Building responsive and reusable frontend components using React.js, Svelte JS, SvelteKit, Hooks, Tailwind CSS, and Bootstrap.",
+        "Designing and implementing secure backend services using Node.js, Express.js, RESTful APIs, and JWT authentication.",
+        "Integrating frontend applications with backend APIs and optimizing application performance using Redis caching and efficient database queries.",
+        "Collaborating with cross-functional teams in Agile/Scrum environments and participating in peer code reviews.",
+        "Managing end-to-end deployments on AWS, including Nginx, PM2, SSL certificates, and application monitoring."
+      ]
+    },
+    {
+      "role": "Full Stack Software Developer Intern",
+      "company": "Print2B Tech Private Limited",
+      "location": "Chennai, India",
+      "period": "July 2022 – November 2022",
+      "startDate": "2022-07-01",
+      "endDate": "2022-11-01",
+      "type": "internship",
+      "tags": [
+        "Full Stack",
+        "JavaScript",
+        "HTML5",
+        "CSS3",
+        "REST APIs",
+        "ReactJS",
+        "NodeJS",
+        "Web Tech"
+      ],
+      "responsibilities": [
+        "Gained hands-on experience in Full Stack development using modern web technologies.",
+        "Contributed to various internal projects and learned industry best practices.",
+        "Collaborated with senior engineers to implement UI flows and integrate REST APIs."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Master of Engineering (M.E.)",
+      "major": "CAD/CAM",
+      "institution": "Anna University",
+      "location": "Chennai, Tamil Nadu, India",
+      "year": "2017 – 2019",
+      "cgpa": "8.11 CGPA",
+      "details": "Focused on computer-aided engineering, design automation, finite element analysis, and computational math. Developed strong analytic and algorithmic logic foundations during course research."
+    },
+    {
+      "degree": "Bachelor of Engineering (B.E.)",
+      "major": "Mechanical Engineering",
+      "institution": "Rajalakshmi Engineering College",
+      "location": "Chennai, Tamil Nadu, India",
+      "year": "2011 – 2015",
+      "cgpa": "7.63 CGPA",
+      "details": "Studied core engineering mechanics, thermodynamics, fluid dynamics, and structured numerical computation. Built logical system-thinking and physical schema designs."
+    }
+  ]
+}

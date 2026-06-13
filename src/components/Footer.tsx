@@ -1,5 +1,6 @@
 import React from "react";
 import { ArrowUp, Github, Linkedin, Code2, Terminal } from "lucide-react";
+import resumeData from "../data/resumeData.json";
 
 export const Footer: React.FC = () => {
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
@@ -14,7 +15,7 @@ export const Footer: React.FC = () => {
     >
       <div
         className="absolute bottom-0 left-1/2 -translate-x-1/2 w-80 h-32 rounded-full blur-[80px]"
-        style={{ background: "rgba(139,92,246,0.06)" }}
+        style={{ background: "rgba(233, 84, 32, 0.04)" }}
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col md:flex-row items-center justify-between gap-6">
@@ -28,7 +29,7 @@ export const Footer: React.FC = () => {
               className="font-bold tracking-wide text-md"
               style={{ color: "var(--text-primary)" }}
             >
-              Venkatesh C
+              {resumeData.personal.name}
             </span>
           </div>
           <p
@@ -46,22 +47,22 @@ export const Footer: React.FC = () => {
             {[
               {
                 icon: Linkedin,
-                href: "https://www.linkedin.com/in/venkatesh-c-4412439a",
+                href: resumeData.personal.socials.linkedin,
                 label: "LinkedIn",
               },
               {
                 icon: Github,
-                href: "https://github.com/venky-123-debug",
+                href: resumeData.personal.socials.github,
                 label: "GitHub",
               },
               {
                 icon: Code2,
-                href: "https://leetcode.com/u/venky_ME/",
+                href: resumeData.personal.socials.leetcode,
                 label: "LeetCode",
               },
               {
                 icon: Terminal,
-                href: "https://www.hackerrank.com/profile/venkat_c_dev",
+                href: resumeData.personal.socials.hackerrank,
                 label: "HackerRank",
               },
             ].map(({ icon: Icon, href, label }) => (

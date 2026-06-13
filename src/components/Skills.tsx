@@ -9,6 +9,7 @@ import {
   Award,
 } from "lucide-react";
 import { motion } from "framer-motion";
+import resumeData from "../data/resumeData.json";
 
 interface SkillCategory {
   title: string;
@@ -20,62 +21,43 @@ interface SkillCategory {
 }
 
 export const Skills: React.FC = () => {
-  const categories: SkillCategory[] = [
-    {
-      title: "Frontend Development",
-      description: "Building modern, scalable and responsive user interfaces.",
+  const visualMeta: Record<string, { icon: React.ComponentType<any>; color: string; span?: string }> = {
+    "Frontend Development": {
       icon: Monitor,
       color: "from-cyan-500/20 to-blue-500/20",
       span: "lg:col-span-2",
-      skills: [
-        "React",
-        "TypeScript",
-        "SvelteKit",
-        "Tailwind CSS",
-        "Bootstrap",
-        "HTML5",
-        "CSS3",
-      ],
     },
-    {
-      title: "Backend & APIs",
-      description:
-        "Designing secure APIs and scalable server-side architectures.",
+    "Backend & APIs": {
       icon: Cpu,
       color: "from-purple-500/20 to-pink-500/20",
-      skills: ["Node.js", "Express.js", "REST APIs", "JWT", "SHA-256"],
     },
-    {
-      title: "Databases",
-      description:
-        "Managing data efficiently with modern databases and caching.",
+    "Databases": {
       icon: Database,
       color: "from-emerald-500/20 to-green-500/20",
-      skills: ["MongoDB", "Redis"],
     },
-    {
-      title: "Cloud & DevOps",
-      description: "Deploying, monitoring and maintaining production systems.",
+    "Cloud & DevOps": {
       icon: Cloud,
       color: "from-pink-500/20 to-rose-500/20",
       span: "lg:col-span-2",
-      skills: ["AWS", "GCP", "Nginx", "PM2", "SSL", "Linux"],
     },
-    {
-      title: "Programming",
-      description: "Strong foundation in modern programming languages.",
+    "Programming": {
       icon: Code,
       color: "from-indigo-500/20 to-violet-500/20",
-      skills: ["JavaScript", "TypeScript", "Node.js", "Python"],
     },
-    {
-      title: "Tools & Testing",
-      description: "Development workflow, version control and testing tools.",
+    "Tools & Testing": {
       icon: Terminal,
       color: "from-amber-500/20 to-orange-500/20",
-      skills: ["Git", "Bitbucket", "Postman", "Jest"],
     },
-  ];
+  };
+
+  const categories: SkillCategory[] = resumeData.skills.map((cat) => ({
+    title: cat.title,
+    description: cat.description,
+    skills: cat.skills,
+    icon: visualMeta[cat.title]?.icon || Code,
+    color: visualMeta[cat.title]?.color || "from-cyan-500/20 to-blue-500/20",
+    span: visualMeta[cat.title]?.span,
+  }));
 
   return (
     <section id="skills" className="relative py-24 overflow-hidden">

@@ -1,6 +1,8 @@
 import React, { useEffect, useState, useRef } from "react";
 import { Award, Code, CheckCircle, ExternalLink, Activity } from "lucide-react";
 import { motion, useInView } from "framer-motion";
+import resumeData from "../data/resumeData.json";
+import { calculateExperience } from "../utils/date";
 
 const AnimatedCounter: React.FC<{
   value: number;
@@ -41,6 +43,8 @@ const AnimatedCounter: React.FC<{
 };
 
 export const Stats: React.FC = () => {
+  const expVal = parseFloat(calculateExperience(resumeData.stats.fullTimeStartDate));
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: { opacity: 1, transition: { staggerChildren: 0.2 } },
@@ -58,7 +62,7 @@ export const Stats: React.FC = () => {
   const statItems = [
     {
       title: "LeetCode",
-      count: 180,
+      count: resumeData.stats.leetcodeSolved,
       suffix: "+",
       description: "Problems Solved",
       detail:
@@ -67,11 +71,11 @@ export const Stats: React.FC = () => {
       colorClass: "from-amber-500 to-orange-600",
       shadowColor: "",
       badgeColor: "bg-orange-500/10 text-orange-400",
-      link: "https://leetcode.com",
+      link: resumeData.personal.socials.leetcode,
     },
     {
       title: "HackerRank",
-      count: 100,
+      count: resumeData.stats.hackerrankSolved,
       suffix: "+",
       description: "Problems Solved",
       detail:
@@ -80,11 +84,11 @@ export const Stats: React.FC = () => {
       colorClass: "from-emerald-400 to-teal-600",
       shadowColor: "",
       badgeColor: "bg-emerald-500/10 text-emerald-400",
-      link: "https://hackerrank.com",
+      link: resumeData.personal.socials.hackerrank,
     },
     {
       title: "Experience",
-      count: 3.6,
+      count: expVal,
       suffix: "+ Years",
       description: "Full Stack Journey",
       detail:

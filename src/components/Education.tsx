@@ -1,6 +1,7 @@
 import React from "react";
 import { GraduationCap, Award, Calendar, BookOpen, MapPin } from "lucide-react";
 import { motion } from "framer-motion";
+import resumeData from "../data/resumeData.json";
 
 interface EducationItem {
   degree: string;
@@ -13,28 +14,7 @@ interface EducationItem {
 }
 
 export const Education: React.FC = () => {
-  const educationList: EducationItem[] = [
-    {
-      degree: "Master of Engineering (M.E.)",
-      major: "CAD/CAM",
-      institution: "Anna University",
-      location: "Chennai, Tamil Nadu, India",
-      year: "2017 – 2019",
-      cgpa: "8.11 CGPA",
-      details:
-        "Focused on computer-aided engineering, design automation, finite element analysis, and computational math. Developed strong analytic and algorithmic logic foundations during course research.",
-    },
-    {
-      degree: "Bachelor of Engineering (B.E.)",
-      major: "Mechanical Engineering",
-      institution: "Rajalakshmi Engineering College",
-      location: "Chennai, Tamil Nadu, India",
-      year: "2011 – 2015",
-      cgpa: "7.63 CGPA",
-      details:
-        "Studied core engineering mechanics, thermodynamics, fluid dynamics, and structured numerical computation. Built logical system-thinking and physical schema designs.",
-    },
-  ];
+  const educationList = resumeData.education as EducationItem[];
 
   const containerVariants = {
     hidden: { opacity: 0 },
