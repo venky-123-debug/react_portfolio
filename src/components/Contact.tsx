@@ -9,6 +9,7 @@ import {
   Linkedin,
   Github,
   MessageSquare,
+  Clock,
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import resumeData from "../data/resumeData.json";
@@ -90,8 +91,8 @@ export const Contact: React.FC = () => {
             Get In Touch <span className="gradient-text"></span>
           </h2>
           <p className="mt-4" style={{ color: "var(--text-secondary)" }}>
-            Whether you'd like to connect, discuss opportunities, ask a question,
-            or simply say hello, I'd be happy to hear from you.
+            Whether you'd like to connect, discuss opportunities, ask a
+            question, or simply say hello, I'd be happy to hear from you.
           </p>
         </div>
 
@@ -391,6 +392,36 @@ export const Contact: React.FC = () => {
                   )}
                 </button>
               </form>
+              <div
+                className="mt-6 p-4 rounded-xl flex items-start gap-3"
+                style={{
+                  background: "var(--bg-elevated)",
+                  border: "1px solid var(--border-base)",
+                }}
+              >
+                <div className="p-2 rounded-lg bg-amber-500/10 text-amber-500 shrink-0">
+                  <Clock className="w-4 h-4" />
+                </div>
+
+                <div>
+                  <h4
+                    className="text-sm font-semibold mb-1"
+                    style={{ color: "var(--text-primary)" }}
+                  >
+                    Contact Form Under Development
+                  </h4>
+
+                  <p
+                    className="text-sm leading-relaxed"
+                    style={{ color: "var(--text-secondary)" }}
+                  >
+                    The contact form interface is available for demonstration
+                    purposes, but messages submitted here are not currently
+                    delivered. Please use the email or social links provided for
+                    direct communication.
+                  </p>
+                </div>
+              </div>
 
               {/* Success Toast */}
               <AnimatePresence>
@@ -405,8 +436,7 @@ export const Contact: React.FC = () => {
                     <div>
                       <span className="font-bold">
                         Message sent successfully!
-                      </span>{" "}
-                      Thank you, Venkatesh will get back to you shortly.
+                      </span>
                     </div>
                   </motion.div>
                 )}
