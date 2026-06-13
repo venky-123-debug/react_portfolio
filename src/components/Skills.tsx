@@ -94,7 +94,7 @@ export const Skills: React.FC = () => {
         </motion.div>
 
         {/* Highlight Stats */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -114,7 +114,7 @@ export const Skills: React.FC = () => {
               <p className="text-sm text-zinc-400 mt-1">{item.label}</p>
             </div>
           ))}
-        </motion.div>
+        </motion.div> */}
 
         {/* Bento Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
