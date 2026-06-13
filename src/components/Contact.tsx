@@ -63,7 +63,7 @@ export const Contact: React.FC = () => {
     `w-full px-4 py-3 rounded-xl transition-all focus:outline-none focus:ring-4 ${
       errors[field]
         ? "border-red-500/60 focus:ring-red-500/20"
-        : "focus:border-brand-purple focus:ring-brand-purple/15"
+        : "focus:border-brand-orange focus:ring-brand-orange/15"
     }`;
 
   return (
@@ -76,7 +76,7 @@ export const Contact: React.FC = () => {
       }}
     >
       <div className="absolute bottom-0 right-0 w-[400px] h-[400px] rounded-full bg-brand-cyan/5 blur-[120px] pointer-events-none" />
-      <div className="absolute top-0 left-0 w-[400px] h-[400px] rounded-full bg-brand-purple/5 blur-[120px] pointer-events-none" />
+      <div className="absolute top-0 left-0 w-[400px] h-[400px] rounded-full bg-brand-orange/5 blur-[120px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
@@ -88,7 +88,7 @@ export const Contact: React.FC = () => {
             className="text-3xl sm:text-4xl font-bold tracking-tight"
             style={{ color: "var(--text-primary)" }}
           >
-            Get In Touch <span className="gradient-text"></span>
+            Hire <span className="gradient-text">Me</span>
           </h2>
           <p className="mt-4" style={{ color: "var(--text-secondary)" }}>
             Whether you'd like to connect, discuss opportunities, ask a
@@ -114,8 +114,8 @@ export const Contact: React.FC = () => {
                     label: "Email",
                     value: resumeData.personal.email,
                     href: `mailto:${resumeData.personal.email}`,
-                    color: "text-brand-purple",
-                    bg: "bg-brand-purple/10",
+                    color: "text-brand-orange",
+                    bg: "bg-brand-orange/10",
                   },
                   {
                     icon: Phone,
@@ -194,7 +194,7 @@ export const Contact: React.FC = () => {
                       href={href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-3 rounded-xl flex items-center justify-center flex-1 gap-2 hover:bg-brand-purple/10 hover:text-brand-purple transition-all"
+                      className="p-3 rounded-xl flex items-center justify-center flex-1 gap-2 hover:bg-brand-orange/10 hover:text-brand-orange transition-all"
                       style={{
                         background: "var(--bg-elevated)",
                         border: "1px solid var(--border-base)",
@@ -377,7 +377,7 @@ export const Contact: React.FC = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full py-4 px-6 rounded-xl bg-linear-to-r from-brand-purple to-brand-cyan hover:opacity-95 text-white font-bold text-sm tracking-wide shadow-lg shadow-brand-purple/20 transition-all flex items-center justify-center gap-2 group cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full py-4 px-6 rounded-xl bg-linear-to-r from-brand-orange to-brand-cyan hover:opacity-95 text-white font-bold text-sm tracking-wide shadow-lg shadow-brand-orange/20 transition-all flex items-center justify-center gap-2 group cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isSubmitting ? (
                     <>

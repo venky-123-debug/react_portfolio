@@ -49,10 +49,10 @@ export const Hero: React.FC<HeroProps> = ({ setActiveTab }) => {
   return (
     <section
       id="about"
-      className="relative min-h-[85vh] pt-28 pb-16 flex items-center justify-center overflow-hidden dot-grid"
+      className="relative min-h-[85vh] pt-8 pb-16 flex items-center justify-center overflow-hidden dot-grid"
     >
       {/* Background Blobs */}
-      <div className="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-80 h-80 rounded-full bg-brand-purple/10 blur-[100px] animate-drift-slow z-0" />
+      <div className="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-80 h-80 rounded-full bg-brand-orange/10 blur-[100px] animate-drift-slow z-0" />
       <div className="absolute bottom-1/4 right-1/4 translate-x-1/2 translate-y-1/2 w-96 h-96 rounded-full bg-brand-cyan/10 blur-[120px] animate-drift-medium z-0" />
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-10 text-center">
@@ -70,7 +70,7 @@ export const Hero: React.FC<HeroProps> = ({ setActiveTab }) => {
             <motion.span
               variants={badgeVariants}
               whileHover="hover"
-              className="px-3.5 py-1.5 text-xs font-semibold rounded-full border border-brand-purple/25 bg-brand-purple/10 text-brand-purple flex items-center gap-1.5 cursor-default"
+              className="px-3.5 py-1.5 text-xs font-semibold rounded-full border border-brand-orange/25 bg-brand-orange/10 text-brand-orange flex items-center gap-1.5 cursor-default"
             >
               <Code2 className="w-3.5 h-3.5" /> Full Stack Developer
             </motion.span>
@@ -124,13 +124,13 @@ export const Hero: React.FC<HeroProps> = ({ setActiveTab }) => {
           >
             <a
               href={`mailto:${resumeData.personal.email}`}
-              className="flex items-center space-x-3 p-3.5 rounded-xl transition-all group hover:border-brand-purple/50 text-left"
+              className="flex items-center space-x-3 p-3.5 rounded-xl transition-all group hover:border-brand-orange/50 text-left"
               style={{
                 background: "var(--bg-surface)",
                 border: "1px solid var(--border-base)",
               }}
             >
-              <div className="p-2 rounded-lg bg-brand-purple/10 text-brand-purple group-hover:scale-110 transition-transform">
+              <div className="p-2 rounded-lg bg-brand-orange/10 text-brand-orange group-hover:scale-110 transition-transform">
                 <Mail className="w-4 h-4" />
               </div>
               <div className="flex flex-col text-left">
@@ -185,15 +185,15 @@ export const Hero: React.FC<HeroProps> = ({ setActiveTab }) => {
             <div className="flex gap-4 justify-center w-full sm:w-auto">
               <button
                 onClick={() => setActiveTab("contact")}
-                className="flex-1 sm:flex-none px-6 py-3.5 rounded-xl bg-linear-to-r from-brand-purple to-brand-cyan hover:opacity-95 text-white font-bold text-sm text-center shadow-lg shadow-brand-purple/20 transition-all flex items-center justify-center gap-2 group cursor-pointer"
+                className="flex-1 sm:flex-none px-6 py-3.5 rounded-xl bg-linear-to-r from-brand-orange to-brand-cyan hover:opacity-95 text-white font-bold text-sm text-center shadow-lg shadow-brand-orange/20 transition-all flex items-center justify-center gap-2 group cursor-pointer"
               >
-                Get In Touch
+                Hire Me
                 <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
               </button>
 
               <button
                 onClick={() => setActiveTab("experience")}
-                className="flex-1 sm:flex-none px-6 py-3.5 rounded-xl font-semibold text-sm text-center transition-all flex items-center justify-center gap-2 hover:bg-brand-purple/10 cursor-pointer"
+                className="flex-1 sm:flex-none px-6 py-3.5 rounded-xl font-semibold text-sm text-center transition-all flex items-center justify-center gap-2 hover:bg-brand-orange/10 cursor-pointer"
                 style={{
                   border: "1px solid var(--border-base)",
                   color: "var(--text-secondary)",
@@ -221,7 +221,7 @@ export const Hero: React.FC<HeroProps> = ({ setActiveTab }) => {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-3 rounded-xl hover:bg-brand-purple/10 hover:text-brand-purple transition-all animate-none"
+                    className="p-3 rounded-xl hover:bg-brand-orange/10 hover:text-brand-orange transition-all animate-none"
                     style={{
                       border: "1px solid var(--border-base)",
                       color: "var(--text-muted)",

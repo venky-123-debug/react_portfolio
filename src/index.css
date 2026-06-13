@@ -7,7 +7,7 @@
   --font-mono: "Ubuntu Mono", monospace;
 
   /* Map standard brand utility names to Ubuntu colors to automatically theme existing elements */
-  --color-brand-purple: #e95420; /* Ubuntu Orange */
+  --color-brand-orange: #e95420; /* Ubuntu Orange */
   --color-brand-cyan: #77216f;   /* Ubuntu Light Aubergine */
   --color-brand-blue: #5e2750;   /* Ubuntu Medium Aubergine */
   --color-brand-emerald: #aea79f; /* Ubuntu Warm Grey */

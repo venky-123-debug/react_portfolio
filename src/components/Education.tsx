@@ -37,7 +37,7 @@ export const Education: React.FC = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-purple/10 border border-brand-purple/20 text-brand-purple text-xs font-semibold uppercase tracking-wider mb-4">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-orange/10 border border-brand-orange/20 text-brand-orange text-xs font-semibold uppercase tracking-wider mb-4">
             <GraduationCap className="w-3.5 h-3.5" /> Qualifications
           </div>
           <h2
@@ -67,12 +67,12 @@ export const Education: React.FC = () => {
               className="glass-card p-8 rounded-3xl hover:-translate-y-1 transition-all text-left flex flex-col justify-between group relative overflow-hidden"
             >
               {/* Top hover accent line */}
-              <div className="absolute top-0 left-0 right-0 h-0.5 bg-linear-to-r from-brand-purple/50 to-brand-cyan/50 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300" />
+              <div className="absolute top-0 left-0 right-0 h-0.5 bg-linear-to-r from-brand-orange/50 to-brand-cyan/50 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300" />
 
               <div>
                 {/* Icon & Date */}
                 <div className="flex items-center justify-between mb-6">
-                  <div className="p-3 rounded-2xl bg-brand-purple/10 text-brand-purple group-hover:scale-110 transition-transform">
+                  <div className="p-3 rounded-2xl bg-brand-orange/10 text-brand-orange group-hover:scale-110 transition-transform">
                     <GraduationCap className="w-6 h-6" />
                   </div>
                   <span
@@ -86,7 +86,7 @@ export const Education: React.FC = () => {
 
                 {/* Degree */}
                 <h3
-                  className="text-xl sm:text-2xl font-extrabold mb-1 group-hover:text-brand-purple transition-colors"
+                  className="text-xl sm:text-2xl font-extrabold mb-1 group-hover:text-brand-orange transition-colors"
                   style={{ color: "var(--text-primary)" }}
                 >
                   {edu.degree}

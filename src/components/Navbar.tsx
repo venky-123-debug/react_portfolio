@@ -65,7 +65,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
   };
 
   const getAppIcon = (id: string) => {
-    const iconClass = "w-4 h-4 mr-1.5 text-brand-purple";
+    const iconClass = "w-4 h-4 mr-1.5 text-brand-orange";
     switch (id) {
       case "about":
         return <Terminal className={iconClass} />;
@@ -100,30 +100,30 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
         <div className="flex items-center space-x-4">
           <button
             onClick={() => setActiveTab("about")}
-            className="hover:text-brand-purple transition-colors flex items-center space-x-1 cursor-pointer font-bold"
+            className="hover:text-brand-orange transition-colors flex items-center space-x-1 cursor-pointer font-bold"
           >
             <span>Activities</span>
           </button>
           
           <span style={{ color: "var(--text-muted)" }}>|</span>
 
-          <div className="flex items-center text-brand-purple">
+          <div className="flex items-center text-brand-orange">
             {getAppIcon(activeTab)}
             <span className="font-bold">{getAppName(activeTab)}</span>
           </div>
         </div>
 
         {/* Center Section: Live Date & Time */}
-        <div className="absolute left-1/2 -translate-x-1/2 cursor-default hover:text-brand-purple transition-colors">
+        <div className="absolute left-1/2 -translate-x-1/2 cursor-default hover:text-brand-orange transition-colors">
           {formatTime(time)}
         </div>
 
         {/* Right Section: System Settings & Utilities */}
         <div className="flex items-center space-x-4">
           <div className="flex items-center space-x-2.5 text-zinc-400">
-            <span title="Connected" className="flex items-center"><Wifi className="w-4 h-4 hover:text-brand-purple cursor-pointer transition-colors" /></span>
-            <span title="Volume: 80%" className="flex items-center"><Volume2 className="w-4 h-4 hover:text-brand-purple cursor-pointer transition-colors" /></span>
-            <span title="Battery: Charging (100%)" className="flex items-center"><Battery className="w-4 h-4 hover:text-brand-purple cursor-pointer transition-colors" /></span>
+            <span title="Connected" className="flex items-center"><Wifi className="w-4 h-4 hover:text-brand-orange cursor-pointer transition-colors" /></span>
+            <span title="Volume: 80%" className="flex items-center"><Volume2 className="w-4 h-4 hover:text-brand-orange cursor-pointer transition-colors" /></span>
+            <span title="Battery: Charging (100%)" className="flex items-center"><Battery className="w-4 h-4 hover:text-brand-orange cursor-pointer transition-colors" /></span>
           </div>
 
           <span style={{ color: "var(--text-muted)" }}>|</span>
@@ -175,14 +175,14 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
                         setActiveTab("contact");
                         setDropdownOpen(false);
                       }}
-                      className="w-full text-left px-3 py-2 text-xs rounded-lg hover:bg-brand-purple/10 hover:text-brand-purple font-semibold transition-all cursor-pointer flex items-center justify-between"
+                      className="w-full text-left px-3 py-2 text-xs rounded-lg hover:bg-brand-orange/10 hover:text-brand-orange font-semibold transition-all cursor-pointer flex items-center justify-between"
                     >
                       <span>Hire Venkatesh</span>
                       <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
                     </button>
                     <a
                       href={`mailto:${resumeData.personal.email}`}
-                      className="block px-3 py-2 text-xs rounded-lg hover:bg-brand-purple/10 hover:text-brand-purple font-semibold transition-all cursor-pointer"
+                      className="block px-3 py-2 text-xs rounded-lg hover:bg-brand-orange/10 hover:text-brand-orange font-semibold transition-all cursor-pointer"
                     >
                       Email Me
                     </a>
@@ -190,7 +190,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
                       href={resumeData.personal.socials.linkedin}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="block px-3 py-2 text-xs rounded-lg hover:bg-brand-purple/10 hover:text-brand-purple font-semibold transition-all cursor-pointer"
+                      className="block px-3 py-2 text-xs rounded-lg hover:bg-brand-orange/10 hover:text-brand-orange font-semibold transition-all cursor-pointer"
                     >
                       LinkedIn Profile
                     </a>
@@ -202,7 +202,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
                       href={resumeData.personal.socials.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="block px-3 py-2 text-xs rounded-lg hover:bg-brand-purple/10 hover:text-brand-purple font-semibold transition-all cursor-pointer"
+                      className="block px-3 py-2 text-xs rounded-lg hover:bg-brand-orange/10 hover:text-brand-orange font-semibold transition-all cursor-pointer"
                     >
                       Github Code
                     </a>

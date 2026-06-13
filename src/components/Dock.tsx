@@ -54,7 +54,7 @@ export const Dock: React.FC<DockProps> = ({ activeTab, setActiveTab }) => {
                 {isActive && (
                   <motion.span
                     layoutId="activeDot"
-                    className="absolute -left-1 md:left-auto md:-left-1.5 top-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-linear-to-r from-brand-purple to-brand-cyan"
+                    className="absolute -left-1 md:left-auto md:-left-1.5 top-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-linear-to-r from-brand-orange to-brand-cyan"
                     style={{ background: "var(--text-accent)" }}
                   />
                 )}

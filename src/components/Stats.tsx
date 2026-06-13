@@ -115,7 +115,7 @@ export const Stats: React.FC<StatsProps> = ({ setActiveTab }) => {
         borderBottom: "1px solid var(--border-base)",
       }}
     >
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-brand-purple/5 blur-[150px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-brand-orange/5 blur-[150px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
@@ -169,7 +169,7 @@ export const Stats: React.FC<StatsProps> = ({ setActiveTab }) => {
                 variants={cardVariants}
                 className="glass-card p-8 rounded-2xl hover:-translate-y-2 transition-all flex flex-col justify-between group relative overflow-hidden"
               >
-                <div className="absolute top-0 right-0 w-24 h-24 bg-linear-to-br from-brand-purple/5 to-transparent rounded-bl-full pointer-events-none" />
+                <div className="absolute top-0 right-0 w-24 h-24 bg-linear-to-br from-brand-orange/5 to-transparent rounded-bl-full pointer-events-none" />
 
                 <div>
                   <div className="flex items-center justify-between mb-6">
@@ -222,7 +222,7 @@ export const Stats: React.FC<StatsProps> = ({ setActiveTab }) => {
                     href={stat.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center text-sm font-semibold text-brand-cyan hover:text-brand-purple transition-colors gap-1.5 mt-auto group-hover:underline"
+                    className="flex items-center text-sm font-semibold text-brand-cyan hover:text-brand-orange transition-colors gap-1.5 mt-auto group-hover:underline"
                   >
                     {`Verify on ${stat.title}`}
                     <ExternalLink className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
@@ -230,7 +230,7 @@ export const Stats: React.FC<StatsProps> = ({ setActiveTab }) => {
                 ) : (
                   <button
                     onClick={() => setActiveTab("experience")}
-                    className="flex items-center text-sm font-semibold text-brand-cyan hover:text-brand-purple transition-colors gap-1.5 mt-auto group-hover:underline cursor-pointer"
+                    className="flex items-center text-sm font-semibold text-brand-cyan hover:text-brand-orange transition-colors gap-1.5 mt-auto group-hover:underline cursor-pointer"
                   >
                     View Work Timeline
                     <ExternalLink className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
@@ -247,11 +247,11 @@ export const Stats: React.FC<StatsProps> = ({ setActiveTab }) => {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="mt-12 p-6 rounded-2xl glass-card flex flex-col sm:flex-row items-center justify-between gap-6 hover:border-brand-purple/40 transition-all"
+          className="mt-12 p-6 rounded-2xl glass-card flex flex-col sm:flex-row items-center justify-between gap-6 hover:border-brand-orange/40 transition-all"
           style={{ border: "1px solid var(--border-base)" }}
         >
           <div className="flex items-center space-x-4">
-            <div className="w-12 h-12 rounded-xl bg-brand-purple/10 flex items-center justify-center text-brand-purple">
+            <div className="w-12 h-12 rounded-xl bg-brand-orange/10 flex items-center justify-center text-brand-orange">
               <CheckCircle className="w-6 h-6" />
             </div>
             <div className="text-left">

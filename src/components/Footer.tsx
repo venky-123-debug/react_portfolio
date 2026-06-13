@@ -22,7 +22,7 @@ export const Footer: React.FC = () => {
         {/* Logo & Tagline */}
         <div className="flex flex-col items-center md:items-start text-center md:text-left gap-1.5">
           <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 rounded-lg bg-linear-to-tr from-brand-purple to-brand-cyan flex items-center justify-center">
+            <div className="w-8 h-8 rounded-lg bg-linear-to-tr from-brand-orange to-brand-cyan flex items-center justify-center">
               <span className="text-white font-extrabold text-sm">V</span>
             </div>
             <span
@@ -71,7 +71,7 @@ export const Footer: React.FC = () => {
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2.5 rounded-lg hover:bg-brand-purple/10 hover:text-brand-purple transition-all"
+                className="p-2.5 rounded-lg hover:bg-brand-orange/10 hover:text-brand-orange transition-all"
                 style={{
                   background: "var(--bg-surface)",
                   border: "1px solid var(--border-base)",

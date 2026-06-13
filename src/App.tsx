@@ -38,7 +38,7 @@ const App: React.FC = () => {
             <div 
               className="h-10 px-4 flex items-center justify-between select-none"
               style={{
-                background: "rgba(48, 10, 36, 0.4)",
+                background: "rgba(48, 10, 36, 0.1)",
                 borderBottom: "1px solid var(--border-base)",
               }}
             >
@@ -50,7 +50,7 @@ const App: React.FC = () => {
               </div>
 
               {/* Window Title (Center) */}
-              <div className="text-[11px] font-mono text-zinc-400">
+              <div className="text-[11px] font-mono text-brand-orange! dark:text-zinc-400">
                 {activeTab === "about" && "terminal - venkat@ubuntu:~"}
                 {activeTab === "stats" && "system-monitor - competence metric logs"}
                 {activeTab === "skills" && "software-center - snap store install list"}

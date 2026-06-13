@@ -39,7 +39,7 @@ export const Experience: React.FC = () => {
         borderBottom: "1px solid var(--border-base)",
       }}
     >
-      <div className="absolute top-1/2 left-0 w-96 h-96 rounded-full bg-brand-purple/5 blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/2 left-0 w-96 h-96 rounded-full bg-brand-orange/5 blur-[120px] pointer-events-none" />
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
@@ -70,7 +70,7 @@ export const Experience: React.FC = () => {
               <div key={idx} className="relative group text-left">
                 {/* Timeline Node Marker */}
                 <span
-                  className="absolute left-[-40px] sm:left-[-48px] top-1.5 flex items-center justify-center w-8 h-8 rounded-full border border-brand-purple text-brand-purple group-hover:scale-110 group-hover:bg-brand-purple group-hover:text-white transition-all shadow-lg shadow-brand-purple/20"
+                  className="absolute left-[-40px] sm:left-[-48px] top-1.5 flex items-center justify-center w-8 h-8 rounded-full border border-brand-orange text-brand-orange group-hover:scale-110 group-hover:bg-brand-orange group-hover:text-brand-orange! dark:group-hover:text-white transition-all shadow-lg shadow-brand-orange/20"
                   style={{ background: "var(--bg-elevated)" }}
                 >
                   <Briefcase className="w-4 h-4" />
@@ -90,7 +90,7 @@ export const Experience: React.FC = () => {
                 </div>
 
                 {/* Card */}
-                <div className="glass-card p-6 sm:p-8 rounded-2xl transition-all hover:border-brand-purple/30">
+                <div className="glass-card p-6 sm:p-8 rounded-2xl transition-all hover:border-brand-orange/30">
                   {/* Header */}
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
                     <div>
@@ -119,7 +119,7 @@ export const Experience: React.FC = () => {
                     <span
                       className={`inline-block px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider ${
                         exp.type === "full-time"
-                          ? "bg-brand-purple/10 text-brand-purple border border-brand-purple/20"
+                          ? "bg-brand-orange/10 text-brand-orange border border-brand-orange/20"
                           : "bg-indigo-500/10 text-indigo-400 border border-indigo-500/20"
                       }`}
                     >
@@ -147,7 +147,7 @@ export const Experience: React.FC = () => {
                   {/* Toggle Button */}
                   <button
                     onClick={() => toggleExpand(idx)}
-                    className="flex items-center text-sm font-semibold text-brand-purple hover:text-brand-cyan transition-colors gap-1 mb-4 focus:outline-none"
+                    className="flex items-center text-sm font-semibold text-brand-orange hover:text-brand-cyan transition-colors gap-1 mb-4 focus:outline-none"
                   >
                     {isExpanded ? (
                       <>
